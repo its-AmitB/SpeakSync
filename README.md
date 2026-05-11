@@ -1,132 +1,178 @@
-That `id="..."` breaks rendering.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=45&duration=3000&pause=500&color=4F46E5&center=true&vCenter=true&width=900&height=100&lines=SpeakSync+%F0%9F%9A%80;Language+Exchange+Platform;MERN+%7C+Stream.io+%7C+Tailwind" />
+</p>
+
+<h1 align="center">🚀 SpeakSync</h1>
+
+<p align="center">
+  <b>Full-Stack Language Exchange Platform</b><br>
+  Built with React • Node.js • Stream.io • MongoDB
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.0.0-4F46E5?style=for-the-badge&logo=github">
+  <img src="https://img.shields.io/badge/Backend-Express.js-000000?style=for-the-badge&logo=express">
+  <img src="https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb">
+  <img src="https://img.shields.io/badge/Comms-Stream.io-0EA5E9?style=for-the-badge">
+</p>
 
 ---
 
-## ✅ **FINAL WORKING VERSION (100% safe)**  
-👉 Copy this EXACTLY — no edits:
+## 🚀 Overview
 
-````md
-# SpeakSync 🚀
+> A full-stack **language exchange platform** where users can connect, practice languages through real-time chat and HD video calls, and build meaningful connections worldwide.
 
-**SpeakSync** is a full-stack language exchange platform where users can connect, practice languages through real-time chat and HD video calls, and build meaningful connections with language partners worldwide.
+Built with modern web technologies, SpeakSync showcases a robust application lifecycle and architecture, demonstrating a strong understanding of:
+- Real-time WebRTC & Socket integration
+- Multi-state user onboarding flows
+- Secure RESTful API design
 
-Built with modern technologies, SpeakSync offers a seamless, responsive experience with powerful real-time features powered by Stream.io.
+---
 
-![SpeakSync Banner](https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=SpeakSync+-+Language+Exchange+Platform)
+## 🧠 Why This Project Stands Out
+
+| Typical Projects ❌ | This Project ✅ |
+|-------------------|----------------|
+| Basic text chat arrays | ✔ Real-time messaging & 1080p HD Video via Stream.io |
+| Simple user models | ✔ Multi-state onboarding & goal-based matching |
+| One-click follow system | ✔ 2-Tier Friend System (Pending + Accepted states) |
+| Hardcoded CSS | ✔ Mobile-first UI with 32+ dynamic DaisyUI Themes |
+| Monolithic routing | ✔ Strict MVC Architecture & JWT Protected Routes |
+
+---
 
 ## ✨ Features
 
-- **Real-time Chat** — Instant messaging with live updates
-- **HD Video Calling** — 1080p video quality with unlimited sessions using Stream.io
-- **Multi-state User Journey** — Complete onboarding, profile setup, and matching flow
-- **2-Tier Friend System** — Send/accept friend requests (pending + accepted)
-- **Language Exchange Focus** — Match with partners based on learning goals
-- **Responsive Design** — Mobile-first interface with 4-tier breakpoints
-- **Theme Customization** — Support for 32+ beautiful DaisyUI themes
-- **Avatars** — 7 unique DiceBear avatar styles (200×200px)
-- **Secure Authentication** — JWT-based auth with protected routes
+### 💬 Real-Time Communication
+- **Instant Messaging:** Live updates and typing indicators
+- **HD Video Calling:** 1080p quality with unlimited sessions
+- Powered by robust **Stream.io** infrastructure
+
+---
+
+### 👥 User Journey & Connections
+- **Language Exchange Focus:** Intelligent matching based on specific learning goals
+- **Complete Onboarding:** Seamless profile and preference setup
+- **Friend Management:** Comprehensive request system (send, accept, pending)
+
+---
+
+### 🎨 UI/UX Customization
+- **Theme Engine:** Support for 32+ beautiful DaisyUI themes
+- **Dynamic Avatars:** 7 unique DiceBear avatar styles (200×200px)
+- **Responsive Design:** 4-tier mobile-first breakpoints
+
+---
+
+## 🎮 System Architecture
+
+```mermaid
+graph LR
+    A[Client UI / React] -->|Auth & User Data| B[Express.js API]
+    A -->|WebSocket / WebRTC| C[Stream.io Servers]
+    B -->|Read/Write Models| D[(MongoDB)]
+    C -->|Real-time Video/Chat| A
+```
+
+---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- ReactJS + Vite
-- Tailwind CSS
-- DaisyUI
-- Stream.io
+- **Framework:** ReactJS + Vite
+- **Styling:** Tailwind CSS + DaisyUI
+- **Comms:** Stream.io SDK
 
 ### Backend
-- Node.js + Express.js
-- MongoDB
-- MVC Architecture
-- JWT Authentication
+- **Environment:** Node.js + Express.js
+- **Database:** MongoDB
+- **Architecture:** MVC Pattern
+- **Security:** JWT Authentication
 
-### Other Tools
+### APIs & Tools
 - Stream.io APIs
 - DiceBear API
 
+---
+
 ## 📁 Project Structure
 
-    SpeakSync/
-    ├── frontend/
-    ├── backend/
-    │   ├── controllers/
-    │   ├── models/
-    │   ├── routes/
-    │   └── middleware/
-    ├── README.md
-    └── .env.example
+```text
+SpeakSync/
+├── frontend/          # React + Vite Client
+├── backend/           # Node.js Server
+│   ├── controllers/   # Route logic
+│   ├── models/        # Mongoose schemas
+│   ├── routes/        # API endpoints
+│   └── middleware/    # Auth & validation
+├── README.md
+└── .env.example
+```
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js (v18+)
-- MongoDB
-- Stream.io Account
+- MongoDB Database
+- Stream.io Account & API Keys
 
-### Installation
+### Installation & Setup
 
-1. Clone the repository
-    git clone https://github.com/its-AmitB/SpeakSync.git
-    cd SpeakSync
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/its-AmitB/SpeakSync.git](https://github.com/its-AmitB/SpeakSync.git)
+   cd SpeakSync
+   ```
 
-2. Backend Setup
-    cd backend
-    npm install
-    cp .env.example .env
+2. **Backend Setup**
+   ```bash
+   cd backend
+   npm install
+   cp .env.example .env # Configure your variables here
+   ```
 
-3. Frontend Setup
-    cd ../frontend
-    npm install
+3. **Frontend Setup**
+   ```bash
+   cd ../frontend
+   npm install
+    ```
 
-4. Run the Application
+4. **Run the Application**
+   - **Terminal 1 (Backend):** `cd backend && npm run dev`
+   - **Terminal 2 (Frontend):** `cd frontend && npm run dev`
 
-    Terminal 1:
-    cd backend
-    npm run dev
-
-    Terminal 2:
-    cd frontend
-    npm run dev
+---
 
 ## 📸 Screenshots
 
-(Add your actual screenshots here)
+*(Add your actual screenshots here)*
 
 | Home | Video | Chat |
 |------|-------|------|
 | ![](link) | ![](link) | ![](link) |
 
-## 🎨 Design Highlights
-
-- Mobile-first
-- 32+ themes
-- DiceBear avatars
-- Smooth UI
-
-## 🔐 Security
-
-- JWT auth
-- Protected routes
-- Env variables
-- MVC structure
+---
 
 ## 🛣️ Roadmap
 
-- [ ] Advanced matching
-- [ ] Voice messages
-- [ ] Screen sharing
-- [ ] Group calls
-- [ ] Progress tracking
-
-## 🤝 Contributing
-
-PRs welcome.
-
-## 📄 License
-
-MIT
+- [ ] Advanced algorithm-based matching
+- [ ] Asynchronous voice messages
+- [ ] Live screen sharing capabilities
+- [ ] Group language exchange calls
+- [ ] User progress and fluency tracking
 
 ---
 
-Made with ❤️  
-Give it a ⭐ if you like it!
+## 🤝 Contributing & License
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+**License:** MIT
+
+<p align="center">
+  Made with ❤️ <br>
+  <b>Give it a ⭐ if you like it!</b>
+</p>
